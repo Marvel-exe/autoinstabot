@@ -1,7 +1,11 @@
 import telebot
 import time
+from dotenv import load_dotenv, dotenv_values
+import os
 
-bot_token = '1028915212:AAGqKGbhyNyrCjS7zflG5KoxPCdFVy4QG6g'
+load_dotenv()
+
+bot_token = os.getenv('BOT_TOKEN') or ''
 
 bot = telebot.TeleBot(token=bot_token)
 
